@@ -465,7 +465,8 @@ flag1,flag2=1;
 
 
 
-
+//this section is just for playing sound
+//nothing to do with robot
 
 #define BUZZER_PIN A1
 
@@ -565,79 +566,7 @@ int durations[] = {
   4, 8, 4, 4,
   4, 4, 8, 4,
   8, 8, 8, 4, 8, 8,
-  8, 4,8, 8, 4,
-  
-  
- /* 4, 8, 8, 8, 4, 8,
-  8, 8, 8, 8, 8, 8, 8, 8,
-  4, 4, 8, 4,
-  2, 2,
-  
-  4, 8, 8, 8, 4, 8,
-  8, 8, 8, 8, 8, 8, 8, 8,
-  4, 4, 8, 4,
-  2, 2,
-  
-  8, 4, 8, 8, 8, 4,
-  8, 4, 8, 2,
-  
-  8, 4, 8, 8, 8, 8, 8,
-  1, 
-  8, 4, 8, 8, 8, 4,
-  8, 4, 8, 2,
-  8, 8, 8, 8, 8, 8, 4,
-  4, 4, 4, 4, 
-  4, 8, 4, 4,
-  
-  4, 4, 8, 4,
-  8, 8, 8, 4, 8, 8,
-  8, 4, 8, 8, 4,
-  
-  4, 8, 4, 4,
-  4, 4, 8, 4,
-  8, 8, 8, 4, 8, 8,
-  8, 4, 8, 8, 4,
-  
-  8, 4, 8, 4, 4,
-  8, 4, 8, 2,
-  8, 8, 8, 8, 8, 8,
-  
-  8, 4, 8, 2,
-  8, 4, 8, 4, 4,
-  8, 4, 8, 2,
-  8, 4, 8, 8, 8, 8,
-  8, 4, 8, 2,
-  
-  8, 4, 8, 4, 4,
-  8, 4, 8, 2,
-  8, 8, 8, 8, 8, 8,
-  
-  8, 4, 8, 2,
-  8, 4, 8, 4, 4,
-  8, 4, 8, 2,
-  8, 4, 8, 8, 8, 8,
-  8, 4, 8, 2,
-  8, 4, 8, 8, 8, 8, 8,
-  1,
-  
-  8, 4, 8, 8, 8, 4,
-  8, 4, 8, 2,
-  8, 8, 8, 8, 8, 8, 4,
-  4, 4, 4, 4, 
-  8, 4, 8, 4, 4,
-  8, 4, 8, 2,
-  8, 8, 8, 8, 8, 8,
-  
-  8, 4, 8, 2,
-  8, 4, 8, 4, 4,
-  8, 4, 8, 2,
-  8, 4, 8, 8, 8, 8,
-  8, 4, 8, 2,
-  
-  //game over sound
-  4, 4, 4,
-  8, 8, 8, 8, 8, 8,
-  8, 8, 2*/
+  8, 4,8, 8, 4,8
 };
 
 
@@ -649,9 +578,7 @@ void sound()
     //to calculate the note duration, take one second divided by the note type.
     //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
     int duration = 1000 / durations[note];
-    tone(BUZZER_PIN, melody[note], duration);
-
-    //to distinguish the notes, set a minimum time between them.
+    tone(BUZZER_PIN, melody[note], duration)he notes, set a minimum time between them.
     //the note's duration + 30% seems to work well:
     int pauseBetweenNotes = duration * 1.30;
     delay(pauseBetweenNotes);
